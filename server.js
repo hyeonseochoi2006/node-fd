@@ -1,9 +1,8 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
-
-const port = process.env.PORT || 8080;
-
+const port = process.env.PORT || 3000;
+ 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -23,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 // 피드백 제출 처리
-app.post('/submit-feedback', (req, res) => {
+app.post('https://port-0-node-fd-ah80fy2lll1x44r8.sel3.cloudtype.app/', (req, res) => {
   const name = req.body.name;
   const message = req.body.message;
 
